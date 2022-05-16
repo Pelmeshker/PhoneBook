@@ -1,0 +1,25 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<!DOCTYPE HTML>
+
+<body>
+<h2>Информация о записи</h2>
+<br>
+
+
+<form method="post" th:object="${phoneBookEntry}" th:action="savePhoneBookEntry">
+    <input type="hidden" name="id" th:value="${phoneBookEntry.id}" placeholder="Id"/>
+    <input type="hidden" name="authorId" th:value="${phoneBookEntry.authorId}" placeholder="AuthorId"/>
+    <input type="text" name="name" th:value="${phoneBookEntry.name}" placeholder="Имя"/>
+    <br><br>
+    <input type="text" name="surname" th:value="${phoneBookEntry.surname}" placeholder="Фимилия"/>
+    <br><br>
+    <input type="text" name="phoneNumber" th:value="${phoneBookEntry.phoneNumber}" placeholder="Телефонный номер"/>
+    <br><br>
+    <input type="text" name="email" th:value="${phoneBookEntry.email}" placeholder="E-mail"/>
+    <br><br>
+    <button type="submit">Сохранить</button>
+</form>
+
+</body>
+</html>
